@@ -9,9 +9,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next/font": "^13.0.4",
+    "@react-three/drei": "^9.41.2",
+    "@react-three/fiber": "^8.9.1",
+    "@types/three": "^0.146.0",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-parallax": "^3.5.1",
+    "react-use": "^17.4.0",
+    "three": "^0.146.0",
     "zod": "^3.18.0"
   },
   "devDependencies": {

@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.backgroundPile {
+  background-image: url("/images/pile.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+
+/* if below -md, size changes to auto 100% */
+@media (max-width: 768px) {
+  .backgroundPile {
+    background-size: auto 50%;
+  }
+}
+
+/* border-b-[1px] border-borderDiv/30  */
+.border-anim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.3);
+  animation: border_animation 1s linear forwards;
+}
+
+@keyframes border_animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeUpAndIn 300ms ease-in forwards;
+}
+
+@keyframes fadeUpAndIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.fadeIn:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.fadeIn:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.fadeIn:nth-child(4) {
+  animation-delay: 400ms;
+}
