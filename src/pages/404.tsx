@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import Button from "../components/common/Button";
 import Header from "../components/common/Header";
 import Title from "../components/SEO/Title";
@@ -16,7 +17,9 @@ const Custom404: NextPage = () => {
           <h2 className="my-8 pr-[15vw] text-5xl text-secondary/80 -sm:my-4 -sm:text-3xl">
             Looks like you got lost in Antarctica ⛄
           </h2>
-          <Button text={"Take me Home →"} />
+          <Link href="/">
+            <Button text={"Take me Home →"} />
+          </Link>
         </div>
       </main>
     </>

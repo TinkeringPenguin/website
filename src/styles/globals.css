@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 .backgroundPile {
   background-image: url("/images/pile.png");
   background-repeat: no-repeat;
@@ -16,7 +21,7 @@
   }
 }
 
-/* border-b-[1px] border-borderDiv/30  */
+/* Header on load anim */
 .border-anim::after {
   content: "";
   position: absolute;
@@ -36,7 +41,8 @@
   }
 }
 
-.fadeIn {
+/* staggered fade in */
+.fadeIn > * {
   opacity: 0;
   animation: fadeUpAndIn 300ms ease-in forwards;
 }
@@ -52,18 +58,144 @@
   }
 }
 
-.fadeIn:nth-child(1) {
+.fadeIn > *:nth-child(1) {
   animation-delay: 100ms;
 }
 
-.fadeIn:nth-child(2) {
+.fadeIn > *:nth-child(2) {
   animation-delay: 200ms;
 }
 
-.fadeIn:nth-child(3) {
+.fadeIn > *:nth-child(3) {
   animation-delay: 300ms;
 }
 
 .fadeIn:nth-child(4) {
   animation-delay: 400ms;
+}
+
+/* https://jarv.is/notes/css-waving-hand-emoji/ */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.667s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.extraMargin {
+  margin-left: 2vw;
+}
+
+/* 
+* gradients too lazy to implement in 
+* tailwind since the figma inspect is there 
+*/
+.goldGradient1 {
+  background: linear-gradient(180deg, #f96614 0%, #f9c614 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.goldGradient2 {
+  background-color: linear-gradient(180deg, #f9c614 0%, #f96614 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* increaser gradients */
+.increaserGrad1 {
+  background: radial-gradient(
+      54.92% 161.95% at 50% 50.51%,
+      #488ef7 0%,
+      #a348f7 91.22%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-position: 400% 400%;
+  text-fill-color: transparent;
+  /* animate gradient rotate */
+  /* animation: rotate 2s linear infinite; */
+}
+
+.increaserGrad2 {
+  background: radial-gradient(
+    79.8% 122.96% at 58.98% 0%,
+    #a348f7 0%,
+    #488ef7 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-position: 400% 400%;
+  text-fill-color: transparent;
+  /* animate gradient rotate */
+  /* animation: rotate 2s linear infinite; */
+}
+
+/* 
+@keyframes rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+/* bounce in from right to left */
+.bounceInRight {
+  animation-name: bounceInRight;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes bounceInRight {
+  0% {
+    transform: translateX(16rem);
+  }
+  75% {
+    transform: translateX(6rem);
+  }
+  90% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
 }
