@@ -39,7 +39,10 @@ const Who: React.FC = () => {
 
   return (
     // animate border bottom on load from left to right
-    <>
+    <div
+      id="who"
+      className="flex min-h-screen w-screen flex-row items-center bg-secondary py-[15vh] pl-[30vw] pr-[20vw]"
+    >
       {/* once scrolled in bounce animate webp of wave.webm in */}
       <div
         className={`absolute top-[102%] right-0 h-64 w-64 ${
@@ -56,94 +59,89 @@ const Who: React.FC = () => {
           <source src="/wave.webm" type="video/webm" />
         </video>
       </div>
-      <div
-        id="who"
-        className="flex min-h-screen w-screen flex-row items-center bg-secondary py-[15vh] pl-[30vw] pr-[20vw]"
-      >
-        <div className={scrolledAbout ? "fadeIn" : "opacity-0"}>
-          <h3 className="text-7xl font-bold text-primary -sm:text-5xl">
-            <span className="text-accent">Me</span>.who()
-          </h3>
-          {/* list of employment */}
-          <ul className="list-disc pl-12 pt-24">
-            <li
-              className="text-5xl leading-[4rem] text-primary -sm:text-3xl"
-              ref={aboutIntersectionRef}
+      <div className={scrolledAbout ? "fadeIn" : "opacity-0"}>
+        <h3 className="text-7xl font-bold text-primary -sm:text-5xl">
+          <span className="text-accent">Me</span>.who()
+        </h3>
+        {/* list of employment */}
+        <ul className="list-disc pl-12 pt-24">
+          <li
+            className="text-5xl leading-[4rem] text-primary -sm:text-3xl"
+            ref={aboutIntersectionRef}
+          >
+            <p>CEO & Founder</p>
+            <Link
+              href="https://antarcticsolutions.ca/"
+              title="antarctic solutions website"
+              target="_blank"
+              className="text-accent transition-all hover:text-buttonHover hover:underline "
             >
-              <p>CEO & Founder</p>
-              <Link
-                href="https://antarcticsolutions.ca/"
-                title="antarctic solutions website"
-                target="_blank"
-                className="text-accent transition-all hover:text-buttonHover hover:underline "
-              >
-                @Antarctic Solutions
-                {/* open link fa icon */}
-                <FaExternalLinkAlt
-                  className="ml-2 inline-block text-accent"
-                  size={32}
-                />
-              </Link>
-            </li>
-            <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-3xl">
-              <p>Formerly SWD</p>
-              <Link
-                href="https://www.intuit.com/"
-                title="intuit website"
-                target="_blank"
-                className="text-accent transition-all hover:text-buttonHover hover:underline "
-              >
-                @Intuit
-              </Link>
-            </li>
-          </ul>
-          <div className="pt-24">
-            <p className="text-5xl text-primary -sm:text-3xl">
-              You might also know me from the donut video🍩
-              <Link
-                href="https://www.youtube.com/watch?v=D26bLJ9ut88"
-                title="Spinning ASCII Donut"
-                target="_blank"
-                className="text-accent transition-all hover:text-buttonHover hover:underline "
-              >
-                <FaExternalLinkAlt
-                  className="ml-2 inline-block text-accent"
-                  size={32}
-                />
-              </Link>
-            </p>
+              @Antarctic Solutions
+              {/* open link fa icon */}
+              <FaExternalLinkAlt
+                className="ml-2 inline-block text-accent"
+                size={32}
+              />
+            </Link>
+          </li>
+          <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-3xl">
+            <p>Formerly SWD</p>
+            <Link
+              href="https://www.intuit.com/"
+              title="intuit website"
+              target="_blank"
+              className="text-accent transition-all hover:text-buttonHover hover:underline "
+            >
+              @Intuit
+            </Link>
+          </li>
+        </ul>
+        <div className="pt-24">
+          <p className="text-5xl text-primary -sm:text-3xl">
+            You might also know me from the donut video🍩
+            <Link
+              href="https://www.youtube.com/watch?v=D26bLJ9ut88"
+              title="Spinning ASCII Donut"
+              target="_blank"
+              className="text-accent transition-all hover:text-buttonHover hover:underline "
+            >
+              <FaExternalLinkAlt
+                className="ml-2 inline-block text-accent"
+                size={32}
+              />
+            </Link>
+          </p>
 
-            {/* video analystics block */}
-            <div className="flex" ref={counterIntersectionRef}>
-              <div className="flex flex-col items-center justify-center p-12">
-                <Increaser
-                  number={VIEWS}
-                  snippet="k+"
-                  scrolled={scrolledCount}
-                  classNames="text-6xl font-bold increaserGrad1"
-                />
-                {/* tailwind style equvilent to background: linear-gradient(180deg, #F96614 0%, #F9C614 100%); */}
-                <p className="p-4 text-3xl font-bold">
-                  👁️ <span className="goldGradient1">Views</span>
-                </p>
-              </div>
-              <div className="flex flex-col items-center justify-center p-12">
-                <Increaser
-                  number={STARS}
-                  snippet="+"
-                  scrolled={scrolledCount}
-                  classNames="text-6xl font-bold increaserGrad1"
-                />
-                {/* tailwind style equvilent to background: linear-gradient(180deg, #F96614 0%, #F9C614 100%); */}
-                <p className="p-4 text-3xl font-bold">
-                  🌟 <span className="goldGradient1">Stars</span>
-                </p>
-              </div>
+          {/* video analystics block */}
+          <div className="flex -md:flex-col" ref={counterIntersectionRef}>
+            <div className="flex flex-col items-center justify-center p-12 -md:pl-0">
+              <Increaser
+                number={VIEWS}
+                snippet="k+"
+                scrolled={scrolledCount}
+                classNames="text-6xl font-bold increaserGrad1"
+              />
+              {/* tailwind style equvilent to background: linear-gradient(180deg, #F96614 0%, #F9C614 100%); */}
+              <p className="p-4 text-3xl font-bold">
+                👁️ <span className="goldGradient1">Views</span>
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center p-12 -md:pl-0">
+              <Increaser
+                number={STARS}
+                snippet="+"
+                scrolled={scrolledCount}
+                classNames="text-6xl font-bold increaserGrad1"
+              />
+              {/* tailwind style equvilent to background: linear-gradient(180deg, #F96614 0%, #F9C614 100%); */}
+              <p className="p-4 text-3xl font-bold">
+                🌟 <span className="goldGradient1">Stars</span>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Who;

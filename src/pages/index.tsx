@@ -2,6 +2,8 @@ import { type NextPage } from "next";
 import dynamic from "next/dynamic";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
+import About from "../components/landing/About";
+import Contact from "../components/landing/Contact";
 import Hero from "../components/landing/Hero";
 
 // dynamic import overlay
@@ -21,6 +23,8 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <Who />
+        <About />
+        <Contact />
       </main>
       <Footer />
     </>

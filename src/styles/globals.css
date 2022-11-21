@@ -21,6 +21,22 @@ html {
   }
 }
 
+/* background on main */
+.backgroundPileMain {
+  background-image: url("/images/pileLarge.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+
+/* if below -md, size changes to auto 100% */
+@media (max-width: 768px) {
+  .backgroundPileMain {
+    background-image: url("/images/pile2.png");
+    background-size: auto 60%;
+  }
+}
+
 /* Header on load anim */
 .border-anim::after {
   content: "";
@@ -198,4 +214,25 @@ html {
   100% {
     transform: translateX(20px);
   }
+}
+
+/* input forms */
+.inputForms {
+  font-size: 2rem;
+  background-clip: padding-box;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 7px 12px 0px rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 700px;
+  width: 100%;
+}
+.inputForms:focus {
+  background-color: white;
+  border-color: rgba(0, 123, 255, 0.945);
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.945);
 }
