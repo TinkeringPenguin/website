@@ -26,31 +26,40 @@ const Header: React.FC = () => {
             loaded ? "opacity-100" : "opacity-0"
           } flex items-center transition-opacity duration-700 `}
         >
+          {/* TODO: change to open sidebar on small screen */}
           {/* list of nav elements */}
           <ul className="flex items-center text-2xl font-light text-secondary">
             <li className="mx-4">
-              <Link href="/" title="Home">
-                Home
-              </Link>
+              <nav>
+                <Link href="/" title="Home">
+                  Home
+                </Link>
+              </nav>
             </li>
             <li className="mx-4">
-              <Link href="/#contact" title="Contact">
-                Contact
-              </Link>
+              <nav>
+                <Link href="/#contact" title="Contact">
+                  Contact
+                </Link>
+              </nav>
             </li>
             <li className="mx-4">
-              <Link href="/projects" title="Projects">
-                Projects
-              </Link>
+              <nav>
+                <Link href="/projects" title="Projects">
+                  Projects
+                </Link>
+              </nav>
             </li>
             <li className="mx-4">
-              <Link
-                href="https://blog.antarcticsolutions.ca/"
-                target="_blank"
-                title="Blog"
-              >
-                Blog
-              </Link>
+              <nav>
+                <Link
+                  href="https://blog.antarcticsolutions.ca/"
+                  target="_blank"
+                  title="Blog"
+                >
+                  Blog
+                </Link>
+              </nav>
             </li>
           </ul>
         </div>
