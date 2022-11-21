@@ -45,8 +45,10 @@ const Head: React.FC = () => {
           <Script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${CONSTANTS.DEFAULT_GOOGLE_ANALYTICS}`}
+            id="google-analytics"
           />
           <Script
+            id="google-analytics-init"
             dangerouslySetInnerHTML={{
               __html: `
   window.dataLayer = window.dataLayer || [];
@@ -54,7 +56,7 @@ const Head: React.FC = () => {
   gtag('js', new Date());
   gtag('config', '${CONSTANTS.DEFAULT_GOOGLE_ANALYTICS}');`,
             }}
-          />{" "}
+          />
         </>
       ) : null}
     </NextHead>

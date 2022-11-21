@@ -27,7 +27,6 @@ const Header: React.FC = () => {
             loaded ? "opacity-100" : "opacity-0"
           } flex items-center transition-opacity duration-700 `}
         >
-          {/* TODO: change to open sidebar on small screen */}
           <MobileNav />
           {/* list of nav elements */}
           <ul className="flex items-center text-2xl font-light text-secondary -sm:hidden">

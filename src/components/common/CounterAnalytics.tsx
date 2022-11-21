@@ -2,10 +2,6 @@ import { useRef, useState } from "react";
 import { useIntersection } from "react-use";
 import Increaser from "../common/Increaser";
 
-interface Props {
-  centered?: boolean;
-}
-
 // TODO: we could pull from an API or from a JSON data file
 // which is generated from a cron job every week using GitHub Actions
 const VIEWS = 243;

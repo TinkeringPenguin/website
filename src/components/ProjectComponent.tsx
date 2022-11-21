@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import CounterAnalytics from "./common/CounterAnalytics";
 import { Parallax } from "react-parallax";
 

@@ -5,7 +5,7 @@ import Model from "./Model";
 // const Model = lazy(() => import("./Model"));
 
 // TODO: optimize loading of component
-const Overlay: React.FC = React.memo(() => {
+const Overlay: React.FC = () => {
   const [blueSide, setBlueSide] = useState(window.innerWidth > 700);
   const [top, setTop] = useState(window.scrollY < window.innerHeight);
   const [smallSize, setSmallSize] = useState(window.innerWidth < 1050);
@@ -78,6 +78,6 @@ const Overlay: React.FC = React.memo(() => {
       {blueSide ? <div className="blueSide"></div> : null}
     </div>
   );
-});
+};
 
 export default Overlay;

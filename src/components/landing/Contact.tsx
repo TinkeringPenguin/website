@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useIntersection } from "react-use";
-import Button from "../common/Button";
 
 const Contact: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);

@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { type NextPage } from "next";
 import Link from "next/link";
 import Button from "../components/common/Button";
 import Header from "../components/common/Header";
