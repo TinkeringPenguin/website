@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
     // animate border bottom on load from left to right
     <div
       id="contact"
-      className="flex w-screen flex-row items-center bg-secondary py-[15vh] pl-[30vw] pr-[20vw]"
+      className="flex w-screen flex-row items-center bg-secondary py-[15vh] pl-[30vw] pr-[20vw] -sm:pr-2"
     >
       {/* once scrolled in bounce animate image of phone.png */}
       {/* <div

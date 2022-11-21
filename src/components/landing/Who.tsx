@@ -41,7 +41,7 @@ const Who: React.FC = () => {
     // animate border bottom on load from left to right
     <div
       id="who"
-      className="flex min-h-screen w-screen flex-row items-center bg-secondary py-[15vh] pl-[30vw] pr-[20vw]"
+      className="flex min-h-screen w-screen flex-row items-center bg-secondary py-[15vh] pl-[30vw] pr-[20vw] -sm:pr-2"
     >
       {/* once scrolled in bounce animate webp of wave.webm in */}
       <div
@@ -66,9 +66,9 @@ const Who: React.FC = () => {
           .who()
         </h3>
         {/* list of employment */}
-        <ul className="list-disc pl-12 pt-24">
+        <ul className="list-disc pl-12 pt-24 -sm:pt-12">
           <li
-            className="text-5xl leading-[4rem] text-primary -sm:text-3xl"
+            className="text-5xl leading-[4rem] text-primary -sm:text-2xl"
             ref={aboutIntersectionRef}
           >
             <p>CEO & Founder</p>
@@ -80,13 +80,10 @@ const Who: React.FC = () => {
             >
               @Antarctic Solutions
               {/* open link fa icon */}
-              <FaExternalLinkAlt
-                className="ml-2 inline-block text-accent"
-                size={32}
-              />
+              <FaExternalLinkAlt className="ml-2 inline-block h-8 w-8 text-accent -sm:h-4 -sm:w-4" />
             </Link>
           </li>
-          <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-3xl">
+          <li className="mt-4 text-5xl leading-[4rem] text-primary -sm:text-2xl">
             <p>Formerly SWD</p>
             <Link
               href="https://www.intuit.com/"
@@ -98,8 +95,8 @@ const Who: React.FC = () => {
             </Link>
           </li>
         </ul>
-        <div className="pt-24">
-          <p className="text-5xl text-primary -sm:text-3xl">
+        <div className="pt-24 -sm:pt-12">
+          <p className="text-5xl text-primary -sm:text-2xl">
             You might also know me from the donut video🍩
             <Link
               href="https://www.youtube.com/watch?v=D26bLJ9ut88"
@@ -107,16 +104,13 @@ const Who: React.FC = () => {
               target="_blank"
               className="text-accent transition-all hover:text-buttonHover hover:underline "
             >
-              <FaExternalLinkAlt
-                className="ml-2 inline-block text-accent"
-                size={32}
-              />
+              <FaExternalLinkAlt className="ml-2 inline-block h-8 w-8 text-accent -sm:ml-0 -sm:h-4  -sm:w-4" />
             </Link>
           </p>
 
           {/* video analystics block */}
           <div className="flex -md:flex-col" ref={counterIntersectionRef}>
-            <div className="flex flex-col items-center justify-center p-12 -md:pl-0">
+            <div className="flex flex-col items-center justify-center p-12 -md:pl-0 -sm:items-start">
               <Increaser
                 number={VIEWS}
                 snippet="k+"
@@ -128,7 +122,7 @@ const Who: React.FC = () => {
                 👁️ <span className="goldGradient1">Views</span>
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center p-12 -md:pl-0">
+            <div className="flex flex-col items-center justify-center p-12 -md:pl-0 -sm:items-start -sm:py-0">
               <Increaser
                 number={STARS}
                 snippet="+"
