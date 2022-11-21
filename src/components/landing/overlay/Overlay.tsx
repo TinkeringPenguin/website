@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy } from "react";
+import React, { useState, useEffect, lazy, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 
@@ -6,6 +6,8 @@ import Model from "./Model";
 
 // TODO: optimize loading of component
 const Overlay: React.FC = () => {
+  const [loaded, setLoaded] = useState(false);
+  // const [firstLoad, setFirstLoad] = useState(0);
   const [blueSide, setBlueSide] = useState(window.innerWidth > 700);
   const [top, setTop] = useState(window.scrollY < window.innerHeight);
   const [smallSize, setSmallSize] = useState(window.innerWidth < 1050);
@@ -14,6 +16,10 @@ const Overlay: React.FC = () => {
   const [screenScale, setScreenScale] = useState(
     window.innerWidth > 1050 ? 1 : 0.5
   );
+  // Use useRef for mutable variables that we want to persist
+  // without triggering a re-render on their change
+  const requestRef = useRef<any>(null);
+  const previousTimeRef = useRef<any>(null);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -56,6 +62,8 @@ const Overlay: React.FC = () => {
         setSmall(0.5);
         setSmallSize(true);
       }
+      if (loaded) return;
+      setLoaded(true);
     };
 
     window.addEventListener("resize", handleResize);
@@ -63,13 +71,46 @@ const Overlay: React.FC = () => {
     handleResize();
   }, [screenScale, smallSize]);
 
-  // TODO: on load animate penguin falling down
+  // TODO: on load animate penguin spinning by requestAnimationFrame on offset for 1.5 seconds
+  // const startingRotation = 4 * Math.PI;
+  // const animLength = 4000;
+  // const animate = (time: number) => {
+  //   if (previousTimeRef.current != undefined) {
+  //     if (firstLoad === 0) {
+  //       setFirstLoad(new Date().getTime());
+  //     }
+  //     const realTime =
+  //       new Date().getTime() - (firstLoad ?? new Date().getTime());
+  //     // console.log(new Date().getTime(), firstLoad, realTime);
+  //     // if over 1.5 seconds, cancel animation
+  //     if (realTime > animLength) {
+  //       setOffset(0);
+  //       return () => cancelAnimationFrame(requestRef.current);
+  //     }
+  //     // const deltaTime = time - previousTimeRef.current;
+
+  //     // Pass on a function to the setter of the state
+  //     // to make sure we always have the latest state
+  //     console.log(
+  //       ((animLength - realTime) / animLength) * 7 * startingRotation
+  //     );
+  //     setOffset(((animLength - realTime) / animLength) * 7 * startingRotation);
+  //   }
+  //   previousTimeRef.current = time;
+  //   requestRef.current = requestAnimationFrame(animate);
+  // };
+  // useEffect(() => {
+  //   if (loaded) {
+  //     requestRef.current = requestAnimationFrame(animate);
+  //     return () => cancelAnimationFrame(requestRef.current);
+  //   }
+  // }, [loaded]);
 
   return (
     <div
-      className={`mobileOpacity pointer-events-none fixed top-[5vh] z-0 mx-[5vw] h-[95vh] w-[30vh] min-w-[450px] transition-all -sm:mx-0 ${
+      className={`mobileOpacity pointer-events-none fixed z-0 mx-[5vw] h-[95vh] w-[30vh] min-w-[450px] -sm:mx-0 ${
         smallSize && top ? "extraMargin" : "3xl:ml-[12vw]"
-      }`}
+      } ${loaded ? "penguinModelLoad" : ""}`}
     >
       <Canvas>
         <Model scroll={offset} small={small} />

@@ -14,6 +14,21 @@ html {
   background-position: bottom;
 }
 
+/* Penguin model starting animations */
+.penguinModelLoad {
+  top: -90vh;
+  animation: fall 2s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    top: -90vh;
+  }
+  100% {
+    top: 5vh;
+  }
+}
+
 /* if below -md, size changes to auto 100% */
 @media (max-width: 768px) {
   .backgroundPile {
@@ -181,8 +196,6 @@ html {
   background-clip: text;
   background-position: 400% 400%;
   text-fill-color: transparent;
-  /* animate gradient rotate */
-  /* animation: rotate 2s linear infinite; */
 }
 
 .increaserGrad2 {
@@ -196,8 +209,6 @@ html {
   background-clip: text;
   background-position: 400% 400%;
   text-fill-color: transparent;
-  /* animate gradient rotate */
-  /* animation: rotate 2s linear infinite; */
 }
 
 /* 
