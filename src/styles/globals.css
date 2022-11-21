@@ -4,14 +4,7 @@
 
 html {
   scroll-behavior: smooth !important;
-  overflow-x: hidden;
-}
-
-.backgroundPile {
-  background-image: url("/images/pile.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: bottom;
+  overflow-x: hidden !important;
 }
 
 /* Penguin model starting animations */
@@ -34,6 +27,13 @@ html {
   .backgroundPile {
     background-size: auto 50%;
   }
+}
+
+.backgroundPile {
+  background-image: url("/images/pile.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
 }
 
 /* background on main */
