@@ -2,34 +2,16 @@ import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { useRef, useState } from "react";
 import { useIntersection } from "react-use";
-import Increaser from "../common/Increaser";
-
-// TODO: we could pull from an API or from a JSON data file
-// which is generated from a cron job every week using GitHub Actions
-const VIEWS = 243;
-const STARS = 400;
+import CounterAnalytics from "../common/CounterAnalytics";
 
 const Who: React.FC = () => {
-  const [scrolledCount, setScrolledCount] = useState(false);
   const [scrolledAbout, setScrolledAbout] = useState(false);
-  const counterIntersectionRef = useRef(null);
   const aboutIntersectionRef = useRef(null);
-  const counterIntersection = useIntersection(counterIntersectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1,
-  });
   const aboutIntersection = useIntersection(aboutIntersectionRef, {
     root: null,
     rootMargin: "0px",
     threshold: 1,
   });
-  if (
-    counterIntersection &&
-    counterIntersection.intersectionRatio > 0.75 &&
-    !scrolledCount
-  )
-    setScrolledCount(true);
   if (
     aboutIntersection &&
     aboutIntersection.intersectionRatio > 0.75 &&
@@ -108,33 +90,7 @@ const Who: React.FC = () => {
             </Link>
           </p>
 
-          {/* video analystics block */}
-          <div className="flex -md:flex-col" ref={counterIntersectionRef}>
-            <div className="flex flex-col items-center justify-center p-12 -md:pl-0 -sm:items-start">
-              <Increaser
-                number={VIEWS}
-                snippet="k+"
-                scrolled={scrolledCount}
-                classNames="text-6xl font-bold increaserGrad1"
-              />
-              {/* tailwind style equvilent to background: linear-gradient(180deg, #F96614 0%, #F9C614 100%); */}
-              <p className="p-4 text-3xl font-bold">
-                👁️ <span className="goldGradient1">Views</span>
-              </p>
-            </div>
-            <div className="flex flex-col items-center justify-center p-12 -md:pl-0 -sm:items-start -sm:py-0">
-              <Increaser
-                number={STARS}
-                snippet="+"
-                scrolled={scrolledCount}
-                classNames="text-6xl font-bold increaserGrad1"
-              />
-              {/* tailwind style equvilent to background: linear-gradient(180deg, #F96614 0%, #F9C614 100%); */}
-              <p className="p-4 text-3xl font-bold">
-                🌟 <span className="goldGradient1">Stars</span>
-              </p>
-            </div>
-          </div>
+          <CounterAnalytics />
         </div>
       </div>
     </div>
