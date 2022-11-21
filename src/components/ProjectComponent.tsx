@@ -11,28 +11,59 @@ const ProjectComponent: React.FC = () => {
           Projects:
         </h1>
         <div className="pt-24">
-          <h2 className="text-5xl font-bold italic text-secondary -sm:text-3xl">
-            Spinning Donut
-          </h2>
-          {/* parallax image */}
-          <div className="mt-12 h-[40vh] w-[40vw] -sm:h-48 -sm:w-48">
-            <Link
-              href="https://www.youtube.com/watch?v=D26bLJ9ut88"
-              target="_blank"
-              className="pt-4"
-            >
-              <Parallax
-                bgImage="/images/donut.webp"
-                bgImageAlt="thumbnail for donut"
-                strength={100}
-                style={{
-                  borderRadius: "10px",
-                  width: "40vw",
-                  height: "40vh",
-                  zIndex: 1,
-                }}
-              />
-            </Link>
+          <div>
+            <h2 className="text-5xl font-bold italic text-secondary -sm:text-3xl">
+              Conspire.ai
+            </h2>
+            {/* parallax image */}
+            <div className="mt-12 h-[40vh] w-[40vw] -sm:h-48 -sm:w-48">
+              <Link
+                href="https://www.youtube.com/watch?v=D26bLJ9ut88"
+                target="_blank"
+                className="pt-4"
+              >
+                <Parallax
+                  bgImage="/images/donut.webp"
+                  bgImageAlt="thumbnail for donut"
+                  strength={100}
+                  style={{
+                    borderRadius: "10px",
+                    width: "40vw",
+                    height: "40vh",
+                    zIndex: 1,
+                  }}
+                />
+              </Link>
+            </div>
+            <p className="mt-4 text-4xl text-secondary/80 -sm:text-2xl">
+              Your digital AI art assistant that helps you create and augment
+              your art
+            </p>
+          </div>
+          <div className="pt-12">
+            <h2 className="text-5xl font-bold italic text-secondary -sm:text-3xl">
+              Spinning Donut
+            </h2>
+            {/* parallax image */}
+            <div className="mt-12 h-[40vh] w-[40vw] -sm:h-48 -sm:w-48">
+              <Link
+                href="https://www.youtube.com/watch?v=D26bLJ9ut88"
+                target="_blank"
+                className="pt-4"
+              >
+                <Parallax
+                  bgImage="/images/donut.webp"
+                  bgImageAlt="thumbnail for donut"
+                  strength={100}
+                  style={{
+                    borderRadius: "10px",
+                    width: "40vw",
+                    height: "40vh",
+                    zIndex: 1,
+                  }}
+                />
+              </Link>
+            </div>
           </div>
 
           <CounterAnalytics />
