@@ -8,7 +8,7 @@ import { useFrame } from "@react-three/fiber";
 
 export function Model({ scroll, small }) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/penguin_model.gltf");
+  const { nodes, materials } = useGLTF("/penguin_model.glb");
   // Animate model
   useFrame((state) => {
     group.current.rotation.x = 0.08 * (scroll / 20) + 0.2;
@@ -52,5 +52,6 @@ export function Model({ scroll, small }) {
   );
 }
 
-// useGLTF.preload("/penguin_model.gltf");
+useGLTF.preload("/penguin_model.glb");
+
 export default Model;

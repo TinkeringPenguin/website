@@ -4,6 +4,7 @@ import Model from "./Model";
 
 // const Model = lazy(() => import("./Model"));
 
+// TODO: optimize loading of component
 const Overlay: React.FC = React.memo(() => {
   const [blueSide, setBlueSide] = useState(window.innerWidth > 700);
   const [top, setTop] = useState(window.scrollY < window.innerHeight);
@@ -62,11 +63,11 @@ const Overlay: React.FC = React.memo(() => {
     handleResize();
   }, [screenScale, smallSize]);
 
-  // on load animate penguin falling down
+  // TODO: on load animate penguin falling down
 
   return (
     <div
-      className={`mobileOpacity pointer-events-none fixed top-[5vh] z-50 mx-[5vw] h-[95vh] w-[30vh] min-w-[450px] transition-all -sm:mx-0 ${
+      className={`mobileOpacity pointer-events-none fixed top-[5vh] z-0 mx-[5vw] h-[95vh] w-[30vh] min-w-[450px] transition-all -sm:mx-0 ${
         smallSize && top ? "extraMargin" : "3xl:ml-[12vw]"
       }`}
     >

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import MobileNav from "./MobileNav";
 
 const Header: React.FC = () => {
   // animate opacity on load
@@ -12,7 +13,7 @@ const Header: React.FC = () => {
   return (
     // animate border bottom on load from left to right
     <header className="border-anim fixed top-0 z-50 w-full bg-gradient-to-b from-primary/40 to-transparent backdrop-blur-sm">
-      <div className="m-auto flex max-w-[88em] flex-1 items-center justify-between px-16">
+      <div className="m-auto flex max-w-[88em] flex-1 items-center justify-between px-16 -sm:px-4">
         <div className="flex items-center">
           <img
             src="/tmpicon.png"
@@ -27,8 +28,9 @@ const Header: React.FC = () => {
           } flex items-center transition-opacity duration-700 `}
         >
           {/* TODO: change to open sidebar on small screen */}
+          <MobileNav />
           {/* list of nav elements */}
-          <ul className="flex items-center text-2xl font-light text-secondary">
+          <ul className="flex items-center text-2xl font-light text-secondary -sm:hidden">
             <li className="mx-4">
               <nav>
                 <Link href="/" title="Home">
