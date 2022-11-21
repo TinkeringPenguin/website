@@ -42,18 +42,20 @@ const Contact: React.FC = () => {
           className="text-7xl font-bold text-primary -sm:text-5xl"
           ref={intersectionRef}
         >
-          <span className="text-accent">Me</span>.contact()
+          <span className="text-accent">Me</span>
+          <wbr />
+          .contact()
         </h3>
 
         <form onSubmit={(e) => sendEmail(e)} className="pt-12">
           <input
-            className="inputForms text-primary transition-all"
+            className="inputForms text-primary transition-all  -sm:w-4/5"
             placeholder="Email Title"
             onChange={(e) => changeTitle(e.target.value)}
           />
           <br />
           <textarea
-            className="inputForms text-primary transition-all"
+            className="inputForms text-primary transition-all  -sm:w-4/5"
             style={{ marginBottom: "1rem!important" }}
             placeholder="Message"
             rows={4}
@@ -66,7 +68,9 @@ const Contact: React.FC = () => {
               href="mailto:andrew@tinkeringpenguin.com"
               className="text-accent hover:text-buttonHover"
             >
-              andrew@tinkingpenguin.com
+              andrew@
+              <wbr />
+              tinkingpenguin.com
             </Link>
           </p>
 

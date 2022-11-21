@@ -129,6 +129,26 @@ html {
 .extraMargin {
   margin-left: 2vw;
 }
+.mobileOpacity div {
+  pointer-events: none !important;
+}
+@media only screen and (max-width: 1050px) {
+  .extraMargin {
+    margin-left: 0vw;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .extraMargin {
+    z-index: 0;
+    margin-left: 20vw;
+  }
+  .mobileOpacity {
+    opacity: 30%;
+  }
+  .mobileOpacity > div {
+    left: -200px;
+  }
+}
 
 /* 
 * gradients too lazy to implement in 
@@ -199,6 +219,13 @@ html {
   animation-name: bounceInRight;
   animation-duration: 2s;
   animation-fill-mode: both;
+}
+
+/* if on tablet or smaller do not display bounceInRight */
+@media (max-width: 768px) {
+  .bounceInRight {
+    display: none;
+  }
 }
 
 @keyframes bounceInRight {

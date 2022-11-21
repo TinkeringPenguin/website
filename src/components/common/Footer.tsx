@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
     // background of pile.png
     <footer
       id="footer"
-      className="backgroundPileMain min-h-[80vh] bg-primary text-center text-2xl text-secondary/80 -md:min-h-[60vh]"
+      className="backgroundPileMain min-h-[80vh] bg-primary text-center text-3xl text-secondary/80 -md:min-h-[60vh] -sm:text-xl"
     >
       <div className="flex h-full flex-row">
         <span className="flex-1"></span>

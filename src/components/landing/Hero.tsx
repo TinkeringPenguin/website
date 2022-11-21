@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       id="hero"
       className="flex min-h-screen flex-row items-center justify-center bg-primary"
     >
-      <div className="w-[22vw]"></div>
+      <div className="w-[22vw] xl:w-[10vw]"></div>
       <div className="fadeIn">
         <h1 className="text-7xl font-bold text-secondary -sm:text-5xl">
           Hey it{"'"}s Andrew,

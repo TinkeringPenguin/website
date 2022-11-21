@@ -61,7 +61,9 @@ const Who: React.FC = () => {
       </div>
       <div className={scrolledAbout ? "fadeIn" : "opacity-0"}>
         <h3 className="text-7xl font-bold text-primary -sm:text-5xl">
-          <span className="text-accent">Me</span>.who()
+          <span className="text-accent">Me</span>
+          <wbr />
+          .who()
         </h3>
         {/* list of employment */}
         <ul className="list-disc pl-12 pt-24">

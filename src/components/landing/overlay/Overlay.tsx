@@ -66,8 +66,8 @@ const Overlay: React.FC = React.memo(() => {
 
   return (
     <div
-      className={`pointer-events-none fixed top-[5vh] z-50 h-[95vh] w-[30vh] min-w-[450px] transition-all ${
-        smallSize && top ? "extraMargin" : ""
+      className={`mobileOpacity pointer-events-none fixed top-[5vh] z-50 mx-[5vw] h-[95vh] w-[30vh] min-w-[450px] transition-all -sm:mx-0 ${
+        smallSize && top ? "extraMargin" : "3xl:ml-[12vw]"
       }`}
     >
       <Canvas>

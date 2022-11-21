@@ -9,7 +9,9 @@ const About: React.FC = () => {
     >
       <div>
         <h3 className="text-7xl font-bold text-secondary -sm:text-5xl">
-          <span className="text-accentDark">Me</span>.about()
+          <span className="text-accentDark">Me</span>
+          <wbr />
+          .about()
         </h3>
         <div className="pt-24">
           <p className="text-5xl text-secondary -sm:text-3xl">
