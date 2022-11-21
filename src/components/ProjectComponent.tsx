@@ -12,12 +12,12 @@ const ProjectComponent: React.FC = () => {
         <h1 className="text-7xl font-bold text-secondary underline -sm:text-5xl">
           Projects:
         </h1>
+        {/* TODO: Conspire coming soon */}
         <div className="pt-24 -sm:pt-12">
-          <div>
+          {/* <div>
             <h2 className="text-5xl font-bold italic text-secondary -sm:text-3xl">
               Conspire.ai
             </h2>
-            {/* parallax image */}
             <div className="mt-12 h-[40vh] w-[40vw] -sm:h-[15vh] -sm:w-[80vw]">
               <Link
                 href="https://www.youtube.com/watch?v=D26bLJ9ut88"
@@ -36,7 +36,7 @@ const ProjectComponent: React.FC = () => {
               Your digital AI art assistant that helps you create and augment
               your art
             </p>
-          </div>
+          </div> */}
           <div className="pt-12">
             <h2 className="text-5xl font-bold italic text-secondary -sm:text-3xl">
               Spinning Donut
