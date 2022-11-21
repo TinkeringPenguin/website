@@ -21,31 +21,19 @@ export function Model({ scroll, small }) {
           castShadow
           receiveShadow
           geometry={nodes.Sphere021.geometry}
-          material={materials["Clay.004"]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Sphere021_1.geometry}
           material={materials.Clay}
         />
         <mesh
           castShadow
           receiveShadow
+          geometry={nodes.Sphere021_1.geometry}
+          material={materials.White}
+        />
+        <mesh
+          castShadow
+          receiveShadow
           geometry={nodes.Sphere021_2.geometry}
-          material={materials["Clay.006"]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Sphere021_3.geometry}
-          material={materials["Clay.003"]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Sphere021_4.geometry}
-          material={materials.Yello}
+          material={materials.Yellow}
         />
       </group>
     </group>
