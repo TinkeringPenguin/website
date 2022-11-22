@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       <div className="m-auto flex max-w-[88em] flex-1 items-center justify-between px-16 -sm:px-4">
         <div className="flex items-center">
           <img
-            src="/tmpicon.png"
+            src="/icon.png"
             alt="Tinkering Penguin Logo"
             title="Tinkering Penguin Logo"
             className="my-4 h-12 w-12"

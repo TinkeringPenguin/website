@@ -41,3 +41,4 @@ yarn-error.log*
 *.tsbuildinfo
 *Zone.Identifier
 *.psd
+img/model/penguin_model.blend
