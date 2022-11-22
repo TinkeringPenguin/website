@@ -41,7 +41,7 @@ const CounterAnalytics: React.FC = () => {
           number={STARS}
           snippet="+"
           scrolled={scrolledCount}
-          classNames="text-6xl font-bold increaserGrad1"
+          classNames="text-6xl font-bold increaserGrad2"
         />
         {/* tailwind style equvilent to background: linear-gradient(180deg, #F96614 0%, #F9C614 100%); */}
         <p className="p-4 text-3xl font-bold">
