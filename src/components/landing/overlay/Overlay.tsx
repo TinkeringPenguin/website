@@ -4,17 +4,19 @@ import Model from "./Model";
 
 // const Model = lazy(() => import("./Model"));
 
+const shinkSize = 1050;
+
 // TODO: optimize loading of component
 const Overlay: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
   // const [firstLoad, setFirstLoad] = useState(0);
   const [blueSide, setBlueSide] = useState(window.innerWidth > 700);
   const [top, setTop] = useState(window.scrollY < window.innerHeight);
-  const [smallSize, setSmallSize] = useState(window.innerWidth < 1050);
+  const [smallSize, setSmallSize] = useState(window.innerWidth < shinkSize);
   const [offset, setOffset] = useState(0);
-  const [small, setSmall] = useState(window.innerWidth > 1050 ? 1 : 0.5);
+  const [small, setSmall] = useState(window.innerWidth > shinkSize ? 1 : 0.5);
   const [screenScale, setScreenScale] = useState(
-    window.innerWidth > 1050 ? 1 : 0.5
+    window.innerWidth > shinkSize ? 1 : 0.5
   );
   // Use useRef for mutable variables that we want to persist
   // without triggering a re-render on their change
@@ -50,7 +52,7 @@ const Overlay: React.FC = () => {
     };
 
     const handleResize = () => {
-      if (window.innerWidth > 1050) {
+      if (window.innerWidth > shinkSize) {
         setBlueSide(true);
         setScreenScale(1);
         setSmall(1);

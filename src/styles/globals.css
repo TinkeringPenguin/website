@@ -149,11 +149,6 @@ html {
 }
 @media only screen and (max-width: 1050px) {
   .extraMargin {
-    margin-left: 0vw;
-  }
-}
-@media only screen and (max-width: 530px) {
-  .extraMargin {
     margin-left: 20vw;
   }
   .mobileOpacity {
