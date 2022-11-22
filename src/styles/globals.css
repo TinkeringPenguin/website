@@ -10,7 +10,7 @@ html {
 /* Penguin model starting animations */
 .penguinModelLoad {
   top: -90vh;
-  animation: fall 2s linear forwards;
+  animation: fall 1s linear forwards;
 }
 
 @keyframes fall {
