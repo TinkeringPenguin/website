@@ -29,7 +29,7 @@ const About: React.FC = () => {
               className="text-accentDark transition-all hover:text-buttonHover hover:underline "
             >
               here
-              <FaExternalLinkAlt className="ml-2 inline-block h-8 w-8 text-accent -sm:h-4 -sm:w-4" />
+              <FaExternalLinkAlt className="ml-2 inline-block h-8 w-8 text-accentDark -sm:h-4 -sm:w-4" />
             </Link>
           </p>
         </div>
