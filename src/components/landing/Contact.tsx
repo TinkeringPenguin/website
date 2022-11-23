@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
             >
               andrew@
               <wbr />
-              tinkingpenguin.com
+              tinkeringpenguin.com
             </Link>
           </p>
 
