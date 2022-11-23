@@ -4,7 +4,7 @@ import Model from "./Model";
 
 // const Model = lazy(() => import("./Model"));
 
-const shinkSize = 1050;
+const shinkSize = 1279;
 
 // TODO: optimize loading of component
 const Overlay: React.FC = () => {
@@ -110,7 +110,7 @@ const Overlay: React.FC = () => {
 
   return (
     <div
-      className={`mobileOpacity pointer-events-none fixed z-0 mx-[5vw] h-[95vh] w-[30vh] min-w-[450px] -sm:mx-0 ${
+      className={`mobileOpacity pointer-events-none fixed z-0 mx-[10vw] h-[95vh] w-[30vh] min-w-[450px] -sm:mx-0 ${
         smallSize && top ? "extraMargin" : "3xl:ml-[12vw]"
       } ${loaded ? "penguinModelLoad" : ""}`}
     >

@@ -147,12 +147,14 @@ html {
 .mobileOpacity div {
   pointer-events: none !important;
 }
-@media only screen and (max-width: 1050px) {
-  .extraMargin {
-    margin-left: 20vw;
-  }
+@media only screen and (max-width: 768px) {
   .mobileOpacity {
     opacity: 30%;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .extraMargin {
+    margin-left: 20vw;
   }
   .mobileOpacity > div {
     left: -200px;
