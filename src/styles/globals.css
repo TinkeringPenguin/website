@@ -270,3 +270,19 @@ html {
   outline: 0;
   box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.945);
 }
+
+/* SVGS */
+.abstractSvg {
+  background-image: url("/vector/abstract.svg");
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position-y: 22vh;
+  background-position-x: 75%;
+}
+.abstractSvg2 {
+  background-image: url("/vector/abstract2.svg");
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position-y: 22vh;
+  background-position-x: 75%;
+}

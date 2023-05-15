@@ -83,7 +83,7 @@ const ProjectComponent: React.FC = () => {
   return (
     <div
       id="projects"
-      className="min-h-screen w-screen bg-primary p-12 pt-[25vh]"
+      className="abstractSvg2 min-h-screen w-screen bg-primary p-12 pt-[25vh]"
     >
       <div className="m-auto max-w-4xl">
         <h1 className="text-7xl font-bold text-secondary underline -sm:text-5xl">
@@ -106,7 +106,14 @@ const ProjectComponent: React.FC = () => {
           />
 
           <CounterAnalytics />
-        </div>
+          <SingleProject
+            title="Tinkering Penguin Trailer"
+            link="https://youtu.be/fYbCX_pIV9Q"
+            img="/images/projects/trailer.jpg"
+            description="My YouTube trailer!"
+          />
+
+      </div>
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ const Who: React.FC = () => {
           playsInline
           className="h-full w-full object-cover"
         >
-          <source src="/wave.webm" type="video/webm" />
+          <source src="/animations/wave.webm" type="video/webm" />
         </video>
       </div>
       <div className={scrolledAbout ? "fadeIn" : "opacity-0"}>
