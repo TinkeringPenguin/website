@@ -1,6 +1,6 @@
 const DEFAULT_TITLE = "Tinkering Penguin";
 const DEFAULT_DESCRIPTION =
-  "Tinkering Penguin's brand website! CEO and Founder, formerly @Intuit.";
+  "Tinkering Penguin's brand website! CEO and Founder of Antarctic Solutions.";
 const DEFAULT_BASE_URL = "https://tinkeringpenguin.com/";
 
 const CONSTANTS = {
